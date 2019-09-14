@@ -1,0 +1,160 @@
+.step1-pics {
+    display: flex;
+    justify-content: space-between;  
+    width: 100%; 
+    margin-top: 40px; 
+}
+
+.step1-gallery {
+    width: 70%; 
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 30px; 
+    .gallery-img {
+        border: 1px solid #fff;
+        width: 140px;
+        height: 140px; 
+        margin-bottom: 25px;
+        overflow: hidden;
+        // &:hover {
+            //parallax czy jakoś?
+        // }
+    }
+}
+
+
+.chosen-img {
+    width: 30%; 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: top; 
+    .chosen-pic {
+        border: 1px solid rgba(46, 49, 49, 1); 
+        display: block; 
+        width: 220px; //te wymiary będą do zmiany jakoś tam kiedyś tam
+        height: 220px; // jak wyżej 
+    }
+}
+
+
+// notatki do hovera na zdjęcie
+//html
+// <div class="hover01 column">
+//   <div>
+//     <figure><img src="https://picsum.photos/300/200?image=244" /></figure>
+//     <span>Hover</span>
+//   </div>
+//   <div>
+//     <figure><img src="https://picsum.photos/300/200?image=1024" /></figure>
+//     <span>Hover</span>
+//   </div>
+//   <div>
+//     <figure><img src="https://picsum.photos/300/200?image=611" /></figure>
+//     <span>Hover</span>
+//   </div>
+// </div>
+
+//css
+// .hover01 figure img {
+// 	-webkit-transform: scale(1);
+// 	transform: scale(1);
+// 	-webkit-transition: .3s ease-in-out;
+// 	transition: .3s ease-in-out;
+// }
+// .hover01 figure:hover img {
+// 	-webkit-transform: scale(1.3);
+// 	transform: scale(1.3);
+// }
+
+
+// hover bardzo ładny
+// html 
+
+// <div class="fx2">
+
+// <a href="#">
+//     <div class="item col4">
+//         <img class="transition img-responsive" src="https://images.unsplash.com/photo-1461611034385-e082102d5c75?auto=format&fit=crop&w=1050&q=60&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D">
+//         <h4>title image</h4>
+//         <p>Description</p>
+//     </div>
+// </a>
+// <a href="#">
+//     <div class="item col4">
+//         <img class="transition img-responsive" src="https://images.unsplash.com/photo-1461611034385-e082102d5c75?auto=format&fit=crop&w=1050&q=60&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D">
+//         <h4>title image</h4>
+//         <p>Description</p>
+//     </div>
+// </a>
+// <a href="#">
+//     <div class="item col4">
+//         <img class="transition img-responsive" src="https://images.unsplash.com/photo-1461611034385-e082102d5c75?auto=format&fit=crop&w=1050&q=60&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D">
+//         <h4>title image</h4>
+//         <p>Description</p>
+//     </div>
+// </a>
+
+// </div>
+
+// css
+// .fx2 .item {
+//     padding: 0;
+// }
+// .fx2 .item img {
+//     padding: 0 !important; 
+//     display: block; 
+//     max-width: 100%; 
+//     height: auto;
+// }
+// .fx2 a:hover .item img, .fx2 a:focus .item img {
+//     opacity: 0.9; 
+//     -webkit-transform: scale(0.95); 
+//     transform: scale(0.95);
+// }
+// .fx2 h4, .fx2 p, .fx2 span {
+//     -webkit-transition: all .5s ease; 
+//     -moz-transition: all .5s ease; 
+//     -o-transition: all .5s ease;  
+//     transition: all .5s ease;
+// } 
+// .fx2 a .item h4 {
+//     font-family: 'Raleway', sans-serif; 
+//     font-size: 16px; 
+//     position: absolute; 
+//     color:#fff; 
+//     text-transform: uppercase; 
+//     letter-spacing: 2px; 
+//     position: absolute; 
+//     top:42%; 
+//     left:0; 
+//     right:0; 
+//     margin:0 auto; 
+//     text-align: center; 
+//     -webkit-filter: blur(5px); filter: blur(5px); 
+//     opacity: 0;
+// }
+// .fx2 a:hover .item h4, .fx2 a:focus .item h4 {
+//     -webkit-filter: blur(0px); filter: blur(0px); 
+//     opacity: 1;
+// }
+// .fx2 a .item p {
+//     font-family: 'Raleway', sans-serif; 
+//     font-size: 8px; 
+//     position: absolute; 
+//     color:#fff; 
+//     text-transform: uppercase; 
+//     letter-spacing: 2px; 
+//     position: absolute; 
+//     top:53%; 
+//     left:0; 
+//     right:0; 
+//     margin:0 auto; 
+//     text-align: center; 
+//     opacity: 0;
+// }
+// .fx2 a:hover .item p, .fx2 a:focus .item p {
+//     opacity: 1;
+// }

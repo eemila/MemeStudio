@@ -1,0 +1,12 @@
+.footer{
+    min-height: 100px; 
+    background: 
+        linear-gradient( rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75) );
+    background-size: cover; 
+    background-position: 50% 20%; 
+    color: #fff;
+    font-size: 0.6rem;
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+}
