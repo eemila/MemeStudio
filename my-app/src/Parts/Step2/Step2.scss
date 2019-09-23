@@ -7,8 +7,6 @@
     .chosen-pic {
         border: 1px solid rgba(46, 49, 49, 1); 
         display: block; 
-        width: 350px; //te wymiary będą do zmiany jakoś tam kiedyś tam
-        height: 350px; // jak wyżej
         margin: 0 auto; 
     }
 }
@@ -26,5 +24,11 @@
 }
 .txt-add-ttl{
     font-size: 1.2rem;
+    color: #fff; 
 }
 
+.addedTxt {
+    color: green; 
+    border: 1px solid red; 
+    background-color: yellow; 
+}

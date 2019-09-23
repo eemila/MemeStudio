@@ -21,21 +21,23 @@ class Painting extends Component {
         let { src, pic_auth, img_ttl } = this.props;
         const { hovering } = this.state;
         const style = {
-            // border: hovering ? "3px solid #fff" : "1px solid #fff",
-            opacity: hovering ? ".5" : "1", 
-            transition: "800ms all"
+            visibility: hovering ? "visible" : "hidden", 
+            border: hovering ? "1px solid #fff" : "none"
         };
         return(
-          <>
-            <img onClick={(e) => { this.props.onClick(e) }} className="gallery-img" src={src} alt="" title="" 
+          <div className="img-ctn">
+            <figure><img onClick={(e) => { this.props.onClick(e) }} 
+                        className="gallery-img" 
+                        src={src} 
+                        alt="" title="" 
                 onMouseEnter={this.onMouseEnter}
                 onMouseLeave={this.onMouseLeave}
-                style={style}
-                href="#chosen-pic"
-            />
-            <h4 className="hidden">{img_ttl}</h4>
-            <p className="hidden">{pic_auth}</p> 
-          </>      
+            /></figure>
+            <div className="ImgInfoCtn" style={style}>
+              <h4 className="picTtl" >{img_ttl}</h4>
+              <p className="picAuth" >{pic_auth}</p> 
+            </div>
+          </div>      
       )
     }
   };

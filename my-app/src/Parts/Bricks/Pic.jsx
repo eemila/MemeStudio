@@ -5,7 +5,12 @@ class Pic extends Component {
       return (
         <article className="chosen-img">
           <div className="chosen-pic">
-            <img src={this.props.bigImage}/>
+            <img 
+              alt="" 
+              src={this.props.bigImage} 
+              style={{width: "350px", 
+                      height: "350px",
+                      objectFit: "cover"}}/>
           </div>
         </article> 
       )

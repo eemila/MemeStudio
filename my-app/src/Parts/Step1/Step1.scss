@@ -1,3 +1,7 @@
+.step1 {
+    min-height: 100vh;
+}
+
 .step1-pics {
     display: flex;
     justify-content: space-between;  
@@ -5,68 +9,74 @@
     margin-top: 40px; 
 }
 
-.step1-gallery {
-    width: 70%; 
+.step1-gallery { 
     display: flex;
     flex-wrap: wrap;
+    flex: 1; 
     justify-content: space-between;
-    align-items: center;
-    margin-right: 30px; 
+    align-items: center; 
+    margin: 0; 
     .gallery-img {
         border: 1px solid #fff;
-        width: 140px;
-        height: 140px; 
-        margin-bottom: 25px;
-        overflow: hidden;
-        // &:hover {
-            //parallax czy jakoś?
-        // }
+        width: 165px;
+        height: 165px; 
+        object-fit: cover;
     }
 }
 
+.img-ctn {
+    position: relative;
+    figure {
+        img {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        -webkit-transition: .3s ease-in-out;
+        transition: .3s ease-in-out;
+        }
+    }
+}
 
-.chosen-img {
-    width: 30%; 
-    display: flex; 
-    flex-direction: column; 
+.img-ctn figure:hover img {
+	-webkit-transform: scale(1.3);
+    transform: scale(1.3);
+    opacity: .4;
+}
+
+.ImgInfoCtn {
+    position: absolute; 
+    top: 22%;
+    left: 20%;
+    transition: 800ms all;
+    color: #fff;
+    font-size: .9rem; 
+    font-weight: 400;
+    display: flex;
+    flex-direction: column;  
+    justify-content: center; 
     align-items: center; 
-    justify-content: top; 
-    .chosen-pic {
-        border: 1px solid rgba(46, 49, 49, 1); 
-        display: block; 
-        width: 220px; //te wymiary będą do zmiany jakoś tam kiedyś tam
-        height: 220px; // jak wyżej 
-    }
+    justify-self: center;
+    padding:5px;  
+}
+
+.picAuth {
+    padding-top: 0;
+    font-size: .8rem;
 }
 
 
-// notatki do hovera na zdjęcie
-//html
-// <div class="hover01 column">
-//   <div>
-//     <figure><img src="https://picsum.photos/300/200?image=244" /></figure>
-//     <span>Hover</span>
-//   </div>
-//   <div>
-//     <figure><img src="https://picsum.photos/300/200?image=1024" /></figure>
-//     <span>Hover</span>
-//   </div>
-//   <div>
-//     <figure><img src="https://picsum.photos/300/200?image=611" /></figure>
-//     <span>Hover</span>
-//   </div>
-// </div>
 
-//css
-// .hover01 figure img {
-// 	-webkit-transform: scale(1);
-// 	transform: scale(1);
-// 	-webkit-transition: .3s ease-in-out;
-// 	transition: .3s ease-in-out;
-// }
-// .hover01 figure:hover img {
-// 	-webkit-transform: scale(1.3);
-// 	transform: scale(1.3);
+
+// .chosen-img {
+//     width: 30%; 
+//     display: flex; 
+//     flex-direction: column; 
+//     align-items: center; 
+//     justify-content: top; 
+//     .chosen-pic {
+//         border: 1px solid rgba(46, 49, 49, 1); 
+//         display: block; 
+//         object-fit: cover; 
+//     }
 // }
 
 
@@ -74,7 +84,6 @@
 // html 
 
 // <div class="fx2">
-
 // <a href="#">
 //     <div class="item col4">
 //         <img class="transition img-responsive" src="https://images.unsplash.com/photo-1461611034385-e082102d5c75?auto=format&fit=crop&w=1050&q=60&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D">
@@ -82,21 +91,6 @@
 //         <p>Description</p>
 //     </div>
 // </a>
-// <a href="#">
-//     <div class="item col4">
-//         <img class="transition img-responsive" src="https://images.unsplash.com/photo-1461611034385-e082102d5c75?auto=format&fit=crop&w=1050&q=60&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D">
-//         <h4>title image</h4>
-//         <p>Description</p>
-//     </div>
-// </a>
-// <a href="#">
-//     <div class="item col4">
-//         <img class="transition img-responsive" src="https://images.unsplash.com/photo-1461611034385-e082102d5c75?auto=format&fit=crop&w=1050&q=60&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D">
-//         <h4>title image</h4>
-//         <p>Description</p>
-//     </div>
-// </a>
-
 // </div>
 
 // css

@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import StepTitle from "../Bricks/Ttl.jsx";
-import Btn from "../Bricks/Btn.jsx";
-import Pic from "../Bricks/Pic.jsx"; 
+// import Btn from "../Bricks/Btn.jsx";
+// import Pic from "../Bricks/Pic.jsx"; 
 import Painting from "../Bricks/Painting.jsx"; 
 
 import img1 from "../../imgs/wenusbirth01.jpg"; 
@@ -18,6 +18,7 @@ import img11 from "../../imgs/Lady-with-an-Ermine.jpg";
 import img12 from "../../imgs/Donne-di-Tahiti.jpg"; 
 import "./Step1.scss"; 
 
+
 class Gallery extends Component {
 
   constructor(props){
@@ -31,6 +32,7 @@ class Gallery extends Component {
   }
 
   onClick(e){
+    e.preventDefault(); 
     this.props.changeBigImage(e.currentTarget.getAttribute('src'));
   }
 
@@ -103,39 +105,24 @@ class Gallery extends Component {
   }
 }
 
-class ChosenPic extends Component {
-  render(){
-    return (
-      <section className="chosen-pic-sec">
-        <Pic bigImage={this.props.bigImage} id="chosen-pic"/> 
-        <Btn txt="Pick this one"/>
-      </section>
-    )
-  }
-}
+// class ChosenPic extends Component {
+//   render(){
+//     return (
+//       <section className="chosen-pic-sec">
+//         <Pic bigImage={this.props.bigImage}/> 
+//         <Btn 
+//           txt="Pick this one"/>
+//       </section>
+//     )
+//   }
+// }
 
 class Pictures extends Component {
-
-  constructor(props){
-    super(props);
-
-    this.changeBigImage = this.changeBigImage.bind(this);
-    this.state = {
-      'bigImage' : ''
-    }
-  }
-
-  changeBigImage(src){
-    this.setState({
-      'bigImage': src
-    })
-  }
-
   render(){
     return (
       <section className="step1-pics">
-        <Gallery changeBigImage={this.changeBigImage} />
-        <ChosenPic bigImage={this.state.bigImage}/>       
+        <Gallery changeBigImage={this.props.changeBigImage} />
+        {/* <ChosenPic bigImage={this.props.bigImage}/>        */}
       </section>
     )
   }
@@ -146,16 +133,14 @@ class Step1 extends Component {
         <div className="ctn-main">
           <section className="step1 step-sec">
             <StepTitle stepNo="Step 1: " title="Pick your masterpiece"/>
-            <Pictures />
+            <Pictures bigImage={this.props.bigImage} changeBigImage={this.props.changeBigImage}/>
           </section>
         </div>
       )
     }
   }
 
-
 export default Step1;
-
 
 // notes - próba dobicia się do api
 // constructor(props){

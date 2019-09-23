@@ -7,6 +7,7 @@ class ReadyMem extends Component {
     return (
       <section className="step3-img">
         <div className="ready-mem-ctn">tu będzie gotowy mem</div>
+        {/* {inputTxt} */}
       </section>
     )
   }
