@@ -1,27 +1,30 @@
 import React, {Component} from 'react';
 
-import img1 from "../imgs/ikarfalljpg.jpg";
-import img2 from "../imgs/thescream.jpg";
-import img3 from "../imgs/wenusbirth01.jpg";
+import img1 from "../imgs/IkarFall.jpg";
+// import img2 from "../imgs/The_Scream.jpg";
+import img3 from "../imgs/WenusBirth.jpg";
+import img4 from "../imgs/wolnosc.jpg";
 
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from 'react-responsive-carousel';
+
+import "./get_inspired.scss"
  
 class MyCarousel extends Component {
     render() {
         return (
             <Carousel>
-                <div>
-                    <img src={img1} />
-                    <p className="legend">Legend 1</p>
+                <div className = "caro-img-ctn">
+                    <img className = "img-responsive caro-img" src={img1} />
                 </div>
-                <div>
-                    <img src={img2} />
-                    <p className="legend">Legend 2</p>
+                {/* <div className = "caro-img-ctn">
+                    <img className = "img-responsive caro-img img-vertical" src={img2} />
+                </div> */}
+                <div className = "caro-img-ctn">
+                    <img className = "img-responsive caro-img" src={img3} />
                 </div>
-                <div>
-                    <img src={img3} />
-                    <p className="legend">Legend 3</p>
+                <div className = "caro-img-ctn">
+                    <img className = "img-responsive caro-img" src={img4} />
                 </div>
             </Carousel>
         );

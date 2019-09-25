@@ -9,7 +9,7 @@ class Inspiration extends Component {
   return (
       <>
         <div className="ctn-main">
-          <section className="step-sec">
+          <section className="step-sec" id="inspiration">
             <Ttl stepNo="Get" title="Inspired"/>
             <MyCarousel />
           </section>  

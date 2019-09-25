@@ -29,7 +29,9 @@ class SimpleSlider extends Component {
           <img style = {{ height: "100px", width: "200px" }} src={img3} />
           <h3>3</h3>
         </div>
-      
+        <div className = "caro-img-ctn">
+                    <img className = "img-responsive caro-img img-vertical" src={img2} />
+                </div>
       </Slider>
     );
   }

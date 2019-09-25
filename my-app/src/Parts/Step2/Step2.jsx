@@ -1,55 +1,47 @@
 import React, {Component} from 'react';
-import { Draggable, Droppable } from 'react-drag-and-drop'; 
+// import { Draggable, Droppable } from 'react-drag-and-drop'; 
 // import Picture from "../Step1/Step1"; 
 import StepTitle from "../Bricks/Ttl.jsx";
 import Btn from "../Bricks/Btn.jsx"; 
 import Pic from "../Bricks/Pic.jsx"; 
 import "./Step2.scss"; 
 
-class DnD extends Component {
-  constructor(props){
-    super(props);
+// class DnD extends Component {
+//   constructor(props){
+//     super(props);
 
-    this.state = {
-      img : []
-    }
-    this.onDrop = this.onDrop.bind(this);
-  }
+    // this.state = {
+    //   img : []
+    // }
+    // this.onDrop = this.onDrop.bind(this);
+  // }
 
-  render() {
-    return (
-      <div style={{backgroundColor: "#fff"}}>
-          <ul>
-              <Draggable type="fruit" data="banana"><li>Banana</li></Draggable>
-              <Draggable type="fruit" data="apple"><li>Apple</li></Draggable>
-              <Draggable type="metal" data="silver"><li>Silver</li></Draggable>
-          </ul>
-          <Droppable
-              types={['fruit']} // <= allowed drop types
-              onDrop={this.onDrop.bind(this)}>
-              <ul style={{backgroundColor: "yellow", borderColor: "red"}} className="Smoothie">
-                <li></li>
-              {this.state.img.length ? this.state.img.map(function(single, key){
-                return <li key={key}>{single}</li>
-              }) : '' }
-              </ul>
+  // render() {
+  //   return (
+  //     <div>
+              {/* <Draggable>ljbihvgch</Draggable> */}
+              {/* <Draggable type="fruit" data="apple"><li>Apple</li></Draggable>
+              <Draggable type="metal" data="silver"><li>Silver</li></Draggable> */}
+  
+          {/* <Droppable>
+              <Pic bigImage={this.props.bigImage} />
           </Droppable>
       </div>
       )
-  }
-  onDrop(data) {
-      console.log(data)
-      let state = this.state;
+  } */}
+  // onDrop(data) {
+  //     console.log(data)
+  //     let state = this.state;
 
-      state["img"].push(
-        data.fruit
-      );
+  //     state["img"].push(
+  //       data.fruit
+  //     );
 
-      this.setState(
-        state
-      );
-  }
-}
+  //     this.setState(
+  //       state
+  //     );
+  // }
+// }
 
 
 class Typing extends Component {
@@ -94,7 +86,7 @@ class Typing extends Component {
           <Btn txt="Add text to the painting" />
         </form>
       
-      {inputTxt}
+        {inputTxt}
 
       </section>
     )
@@ -111,7 +103,7 @@ class Elements extends Component {
   render(){
     return (
       <div className="step2-elements">
-        <DnD />
+        {/* <DnD /> */}
         <Pic bigImage={this.props.bigImage} />
         <Typing />
       </div>
@@ -119,11 +111,12 @@ class Elements extends Component {
   }
 }
 
+
 class Step2 extends Component {
     render(){
       return (
         <div className="ctn-main">
-          <section className="step2 step-sec">
+          <section className="step2 step-sec" id="step2">
             <StepTitle stepNo="Step 2: " title="Type your text"/>
             <Elements bigImage={this.props.bigImage}/>
           </section>

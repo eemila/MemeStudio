@@ -9,9 +9,9 @@ class MainMenu extends Component {
     return (
       <ul className="menu-main">
         <li className="menu-main-item"><a href="/" className="menu-main-item-link">Home</a></li>
-        <li className="menu-main-item"><a href="/" className="menu-main-item-link">Get started</a></li>
-        <li className="menu-main-item"><a href="/" className="menu-main-item-link">Get inspired</a></li>
-        <li className="menu-main-item"><a href="/" className="menu-main-item-link">Contact us</a></li>
+        <li className="menu-main-item"><a href="#step1" className="menu-main-item-link">Get started</a></li>
+        <li className="menu-main-item"><a href="#inspiration" className="menu-main-item-link">Get inspired</a></li>
+        <li className="menu-main-item"><a href="#foot" className="menu-main-item-link">Contact us</a></li>
       </ul>
     )
   }
@@ -64,7 +64,7 @@ class WelcomeSec extends Component {
           <section className="slogan-main"
             style={{ top: this.state.offset / 2 }}>
            <p className="slogan-txt">Create the awesome memes and impress your art geek friends</p>
-           <a href="/" className="start-btn">Get started</a>
+           <a href="#step1" className="start-btn">Get started</a>
          </section>
         </div>
       </section>
