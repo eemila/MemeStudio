@@ -15,16 +15,16 @@ class MyCarousel extends Component {
         return (
             <Carousel>
                 <div className = "caro-img-ctn">
-                    <img className = "img-responsive caro-img" src={img1} />
+                    <img className = "img-responsive caro-img" src={img1} alt=""/>
                 </div>
                 {/* <div className = "caro-img-ctn">
                     <img className = "img-responsive caro-img img-vertical" src={img2} />
                 </div> */}
                 <div className = "caro-img-ctn">
-                    <img className = "img-responsive caro-img" src={img3} />
+                    <img className = "img-responsive caro-img" src={img3} alt="" />
                 </div>
                 <div className = "caro-img-ctn">
-                    <img className = "img-responsive caro-img" src={img4} />
+                    <img className = "img-responsive caro-img" src={img4} alt="" />
                 </div>
             </Carousel>
         );

@@ -26,17 +26,16 @@
 
 .img-ctn {
     position: relative;
-    figure {
         img {
         -webkit-transform: scale(1);
         transform: scale(1);
         -webkit-transition: .3s ease-in-out;
         transition: .3s ease-in-out;
         }
-    }
 }
 
-.img-ctn figure:hover img {
+
+.img-ctn:hover img {
 	-webkit-transform: scale(1.3);
     transform: scale(1.3);
     opacity: .4;
@@ -54,7 +53,7 @@
     flex-direction: column;  
     justify-content: center; 
     align-items: center; 
-    justify-self: center;
+    // justify-self: center;
     padding:5px;  
     width: 155px;
     height: 155px; 
@@ -67,19 +66,6 @@
 
 
 
-
-// .chosen-img {
-//     width: 30%; 
-//     display: flex; 
-//     flex-direction: column; 
-//     align-items: center; 
-//     justify-content: top; 
-//     .chosen-pic {
-//         border: 1px solid rgba(46, 49, 49, 1); 
-//         display: block; 
-//         object-fit: cover; 
-//     }
-// }
 
 
 // hover bardzo ładny
