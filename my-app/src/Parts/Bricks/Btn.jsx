@@ -4,7 +4,9 @@ class Btn extends Component {
     render(){
       let { txt } = this.props
       return(
-        <a href="/" className="secondary-btn">{txt}</a>
+        <a 
+        className="secondary-btn"
+        onClick={(e)=>{this.props.handleMemeCreation(e)}}>{txt}</a>
       )
     }
   };

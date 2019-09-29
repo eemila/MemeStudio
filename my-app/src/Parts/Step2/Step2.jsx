@@ -1,47 +1,9 @@
 import React, {Component} from 'react';
-// import { Draggable, Droppable } from 'react-drag-and-drop'; 
 // import Picture from "../Step1/Step1"; 
 import StepTitle from "../Bricks/Ttl.jsx";
 import Btn from "../Bricks/Btn.jsx"; 
 import Pic from "../Bricks/Pic.jsx"; 
 import "./Step2.scss"; 
-
-// class DnD extends Component {
-//   constructor(props){
-//     super(props);
-
-    // this.state = {
-    //   img : []
-    // }
-    // this.onDrop = this.onDrop.bind(this);
-  // }
-
-  // render() {
-  //   return (
-  //     <div>
-              {/* <Draggable>ljbihvgch</Draggable> */}
-              {/* <Draggable type="fruit" data="apple"><li>Apple</li></Draggable>
-              <Draggable type="metal" data="silver"><li>Silver</li></Draggable> */}
-  
-          {/* <Droppable>
-              <Pic bigImage={this.props.bigImage} />
-          </Droppable>
-      </div>
-      )
-  } */}
-  // onDrop(data) {
-  //     console.log(data)
-  //     let state = this.state;
-
-  //     state["img"].push(
-  //       data.fruit
-  //     );
-
-  //     this.setState(
-  //       state
-  //     );
-  // }
-// }
 
 
 class Typing extends Component {
@@ -50,7 +12,8 @@ class Typing extends Component {
     super(props);
 
     this.handleTxtAdd = this.handleTxtAdd.bind(this);
-    // this.handleMemeCreation = this.handleMemeCreation.bind(this); 
+    this.onClick = this.onClick.bind(this);
+    this.handleMemeCreation = this.handleMemeCreation.bind(this); 
   }
 
   state = {
@@ -62,8 +25,18 @@ class Typing extends Component {
       const value = e.target.value; 
       this.setState({
           txt: value
-      })
-      console.log(this.state.txt)
+      });
+      this.props.changeStatus(this.state.txt);
+  }
+
+  onClick(e){
+    e.preventDefault(); 
+    this.props.changeBigImage(e.currentTarget.getAttribute('src'));
+  }
+
+  handleMemeCreation(e){
+    e.preventDefault();
+    this.props.generateMeme(e.currentTarget.getAttribute('src'));
   }
 
   render(){
@@ -81,13 +54,10 @@ class Typing extends Component {
           <textarea type="text" 
                     value={this.state.txt} 
                     onChange={this.handleTxtAdd}>
-
           </textarea>
-          <Btn txt="Add text to the painting" />
+          <Btn txt="Looks good! Share this pic"
+              handleMemeCreation={this.handleMemeCreation}/>
         </form>
-      
-        {inputTxt}
-
       </section>
     )
   }
@@ -97,20 +67,28 @@ class Elements extends Component {
   
   constructor(props){
     super(props);
+    this.changeStatus = this.changeStatus.bind(this)
+  }
+
+  state = {
+    status: ""
+  }
+
+  changeStatus(val) {
+    this.setState({
+      status: val
+    })
   }
   
-
   render(){
     return (
       <div className="step2-elements">
-        {/* <DnD /> */}
-        <Pic bigImage={this.props.bigImage} />
-        <Typing />
+        <Pic status={this.state.status} bigImage={this.props.bigImage} />
+        <Typing changeStatus={this.changeStatus} generateMeme={this.props.generateMeme}/>
       </div>
     )
   }
 }
-
 
 class Step2 extends Component {
     render(){
@@ -118,7 +96,7 @@ class Step2 extends Component {
         <div className="ctn-main">
           <section className="step2 step-sec" id="step2">
             <StepTitle stepNo="Step 2: " title="Type your text"/>
-            <Elements bigImage={this.props.bigImage}/>
+            <Elements bigImage={this.props.bigImage} generateMeme={this.props.generateMeme}/>
           </section>
         </div>
       )

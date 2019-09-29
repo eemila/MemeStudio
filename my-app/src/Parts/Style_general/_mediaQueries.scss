@@ -68,7 +68,7 @@
    }
 
    .logo {
-    font-size: 1.8rem;
+        font-size: 1.8rem;
     }
 
    .slogan-main {
@@ -83,13 +83,37 @@
         font-size: 1rem;
         font-weight: 400; 
     }
-
   }
+
+  //step2
+//   .step2-elements {
+//     display: flex; 
+//     flex-direction: column; 
+//     align-items: center;  
+//     }
+
+//   .chosen-img{
+//       width: 100%;
+//     }
+
+//   .typing-sec{
+//     width: 100%;
+//     }   
   
 @media (max-width: 500px) {
     
-  
-    
+    .slogan-main {
+        line-height: 1.1; 
+        .slogan-txt {
+            font-size: 2rem; 
+        }
+    }
+
+    .start-btn {
+        padding: .7rem 3.2rem; 
+        font-size: .7rem;
+        font-weight: 400; 
+    }
 }
 
 

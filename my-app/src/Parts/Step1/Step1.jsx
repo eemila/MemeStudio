@@ -105,24 +105,12 @@ class Gallery extends Component {
   }
 }
 
-// class ChosenPic extends Component {
-//   render(){
-//     return (
-//       <section className="chosen-pic-sec">
-//         <Pic bigImage={this.props.bigImage}/> 
-//         <Btn 
-//           txt="Pick this one"/>
-//       </section>
-//     )
-//   }
-// }
 
 class Pictures extends Component {
   render(){
     return (
       <section className="step1-pics">
         <Gallery changeBigImage={this.props.changeBigImage} />
-        {/* <ChosenPic bigImage={this.props.bigImage}/>        */}
       </section>
     )
   }
@@ -142,31 +130,3 @@ class Step1 extends Component {
 
 export default Step1;
 
-// notes - próba dobicia się do api
-// constructor(props){
-  //   super(props);
-
-  //   this.state={
-  //     url: "",
-  //   };  
-  // }
-
-  // componentDidMount() {
-  //   this.uploadImages();
-  // } 
-
-  // uploadImages = () => {
-  //   fetch(`"https://api.artsy.net/api/artworks/collections/" -H "X-XAPP-Token:X-Xapp-Token:eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJyb2xlcyI6IiIsImV4cCI6MTU2OTAxMjU1NSwiaWF0IjoxNTY4NDA3NzU1LCJhdWQiOiI1ZDdhMDJkMGMyNmY2MTAwMGVhZGE1MGIiLCJpc3MiOiJHcmF2aXR5IiwianRpIjoiNWQ3YzAwY2I4MzU2YTUwMDBlNTg3MzhlIn0.8pl-N9ciBbEtylmWNktGHKsFvpQAwlk8M9H59o2lcJ4"`)
-  //   .then(res => res.text())          // convert to plain text
-  //   .then(text => console.log(text))
-    // .then(resp => {
-       
-    //   if(resp.ok){
-    //     return resp
-    //   }
-    //     throw Error("coś tu nie działa");
-    // })  
-  //   .then(resp => resp.json())
-  //   .then(imgs => console.log(imgs))
-  //   .catch(err => console.log(err))
-  // }      

@@ -23,7 +23,8 @@ class Painting extends Component {
         const style = {
             visibility: hovering ? "visible" : "hidden", 
             border: hovering ? "1px solid #fff" : "none"
-        };
+        }
+      
         return(
           <div className="img-ctn">
             <img onClick={(e) => { this.props.onClick(e) }} 
@@ -33,10 +34,9 @@ class Painting extends Component {
                 onMouseEnter={this.onMouseEnter}
                 onMouseLeave={this.onMouseLeave}
             />
-            <div className="ImgInfoCtn" style={style}>
-              <h4 className="picTtl" >{img_ttl}</h4>
-              <p className="picAuth" >{pic_auth}</p> 
-            </div>
+            <h4 className="picTtl" >{img_ttl}</h4>
+            <p className="picAuth" >{pic_auth}</p>
+             
           </div>      
       )
     }
